@@ -53,8 +53,8 @@ if [ "$1" = 'filebeat' ]; then
     # Change the ownership of /usr/share/elasticsearch/data to elasticsearch
     #    chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data
 
-	set -- "$@"
-    exec gosu daemon filebeat "$@"
+    set -- "$@"
+    exec gosu daemon filebeat -e -v "$@"
 else
 	# As argument is not related to elasticsearch,
 	# then assume that user wants to run his own process,
