@@ -1,6 +1,6 @@
-LATEST_IMAGE:="7thsense/filebeat:latest"
+LATEST_IMAGE:="7thsense/filebeat-ecs:latest"
 PARAMS:="filebeat"
-IMAGE:="7thsense/filebeat:1.1.1"
+IMAGE:="7thsense/filebeat-ecs:1.1.1"
 
 build: Dockerfile bootstrap.sh docker-entrypoint.sh 
 	docker build .

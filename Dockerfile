@@ -10,8 +10,6 @@ VOLUME /var/log
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 9200 9300
-
 CMD ["filebeat"]
-WORKDIR /var/log
+WORKDIR /etc/filebeat
 
